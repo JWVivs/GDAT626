@@ -183,5 +183,13 @@ plot(forecast_fit3)
 
 # ARIMA deseasonal_cnt 2,1,8 (model we decided would be best)
 plot(forecast_subset)
+
+# Adding seasonality back in to auto ARIMA
+fit1_seasonal <- auto.arima(ts(deseasonal_cnt[522:772]), seasonal = TRUE)
+forecast_fit1_seasonal <- forecast(fit1_seasonal, h=30)
+plot(forecast_fit1_seasonal)
+tsdisplay(residuals(fit1_seasonal), lag.max = 20, main = 'Seasonal Auto ARIMA Model')
+# Still bad performs poorly.
+
 ```
 
