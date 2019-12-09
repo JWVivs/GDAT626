@@ -191,5 +191,14 @@ plot(forecast_fit1_seasonal)
 tsdisplay(residuals(fit1_seasonal), lag.max = 20, main = 'Seasonal Auto ARIMA Model')
 # Still bad performs poorly.
 
+# Auto ARIMA (4,1,5)
+summary(fit)
+# MASE = 0.008
+
+# ARIMA (2,1,8)
+summary(fit2)
+# MASE = 0.48
+
+# MASE much higher in the 2,1,8 ARIMA, indicating a higher forecast accuracy.
 ```
 
