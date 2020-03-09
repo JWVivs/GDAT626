@@ -26,3 +26,11 @@ Now that I have a general direction of what kind of model I want to build, I nee
 ![](https://github.com/JWVivs/GDAT626/blob/master/GDAT626_DataProject_files/figure-gfm/DECOMPOSING%20THE%20DATA-1.png)
 
 <b>Figure 3.</b> Decomposition of the Weekly Moving Average
+
+Figure 3 shows the decomposition plot of the weekly moving average. There appears to be a steady, positive trend, but there also appears to be a daily seasonal pattern. It is important to remove the seasonality so we can better understand the underlying trend that may be hiding in the data. By doing so, we eradicate noise that may have been masking a trend we would not have seen prior to removing seasonality, which in turn smooths the data. I saved the non-seasonal weekly moving average data into a vector named ‘deseasonal_cnt’, which will be used when the ARIMA model is being built.
+
+![](https://github.com/JWVivs/GDAT626/blob/master/GDAT626_DataProject_files/figure-gfm/DECOMPOSING%20THE%20DATA-2.png)
+
+<b>Figure 4.</b> Autocorrelation Plot of the Seasonal Weekly Moving Average
+
+The autocorrelation plot in Figure 4 is part of the reason that I was not completely sold on the data being stationary. The lags all extend far beyond the blue lines, indicating that they are all dependent on each other. I opted to create an autocorrelation plot of the non-seasonal data (‘deseasonal_cnt’) after I conducted differencing.
