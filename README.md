@@ -5,4 +5,5 @@ Although it is difficult, being able to predict future stock prices is an extrem
 
 ## Section II. Exploratory Data Analysis
 The dataset consisted of the date, the open, high, low, close, and adjusted prices, along with volume. As mentioned earlier, I wanted to assess the closing stock prices, which means that I will have to filter my dataset to feature only the closing price and date. 
+
 ![](https://github.com/JWVivs/GDAT626/blob/master/GDAT626_DataProject_files/figure-gfm/Exploratory%20Data%20Analysis-1.png)
